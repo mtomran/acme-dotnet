@@ -1,0 +1,11 @@
+/home/t24/code/masoud/dotnettest/server/bin/Release/netcoreapp2.1/dotnettest.deps.json
+/home/t24/code/masoud/dotnettest/server/bin/Release/netcoreapp2.1/dotnettest.runtimeconfig.json
+/home/t24/code/masoud/dotnettest/server/bin/Release/netcoreapp2.1/dotnettest.runtimeconfig.dev.json
+/home/t24/code/masoud/dotnettest/server/bin/Release/netcoreapp2.1/dotnettest.dll
+/home/t24/code/masoud/dotnettest/server/bin/Release/netcoreapp2.1/dotnettest.pdb
+/home/t24/code/masoud/dotnettest/server/obj/Release/netcoreapp2.1/dotnettest.csprojAssemblyReference.cache
+/home/t24/code/masoud/dotnettest/server/obj/Release/netcoreapp2.1/dotnettest.csproj.CoreCompileInputs.cache
+/home/t24/code/masoud/dotnettest/server/obj/Release/netcoreapp2.1/dotnettest.AssemblyInfoInputs.cache
+/home/t24/code/masoud/dotnettest/server/obj/Release/netcoreapp2.1/dotnettest.AssemblyInfo.cs
+/home/t24/code/masoud/dotnettest/server/obj/Release/netcoreapp2.1/dotnettest.dll
+/home/t24/code/masoud/dotnettest/server/obj/Release/netcoreapp2.1/dotnettest.pdb

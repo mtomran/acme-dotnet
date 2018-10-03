@@ -1,0 +1,32 @@
+version: '3'
+services:
+  server:    
+    build: ./server
+    volumes:
+      - ./server:/usr/src/app
+    depends_on: 
+      - db
+    restart: unless-stopped
+  
+  db:
+    build: ./db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    restart: unless-stopped
+  
+  # www:
+  #   build: ./www
+  #   volumes:
+  #     - ./www:/usr/src/app     
+  #   restart: unless-stopped
+  
+  # proxy:
+  #   build: ./proxy
+  #   ports: 
+  #     - "80:80"
+  #   depends_on: 
+  #     - www
+  #     - server  
+  #   restart: unless-stopped
+    
