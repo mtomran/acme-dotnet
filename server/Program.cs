@@ -1,15 +1,39 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using MongoDB.Bson;
 
-namespace dotnettest
+namespace server
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello There!");
-            var name= Console.ReadLine();
-            
-            Console.WriteLine("Hello {0}!!!", name);
+            Mongo.connect();
+            var document = new BsonDocument
+            {
+                { "title", "MongoDB" },
+                { "type", "Database" },                
+                { "sensors", new BsonDocument
+                    {
+                        { "fuel", "90" },
+                        { "engine", "ON" }
+                    }}
+            };
+            Mongo.insert(document);
+            Mongo.get();
+
+            CreateWebHostBuilder(args).Build().Run();
         }
+
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>();
     }
 }

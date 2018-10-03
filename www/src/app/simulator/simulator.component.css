@@ -1,0 +1,15 @@
+
+
+.simulator-left-panel { 
+    position: absolute;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.device-list {
+    position: absolute;
+    left: 300px;
+    width: 80%;
+}
+
